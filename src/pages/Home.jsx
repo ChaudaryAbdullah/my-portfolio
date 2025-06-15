@@ -1,3 +1,4 @@
+// Importing necessary dependencies and assets
 import React, { useState } from "react";
 import profileImage from "../assets/images/2023_04_19_17_15_IMG_1912.JPG";
 import forkify1 from "../assets/images/forkify1.png";
@@ -19,20 +20,18 @@ import ProjectModal from "./ProjectModel";
 import { ProjectCard } from "./ProjectCard";
 import "font-awesome/css/font-awesome.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+// Importing icons from Font Awesome
 import {
   faHouse,
   faUser,
   faGear,
   faFolder,
   faEnvelope,
+  faChartLine,
+  faLaptop,
 } from "@fortawesome/free-solid-svg-icons";
-import { faChartLine, faLaptop } from "@fortawesome/free-solid-svg-icons";
-
-import {
-  faCalendar,
-  faPenToSquare,
-  //   faLaptop,
-} from "@fortawesome/free-regular-svg-icons";
+import { faCalendar, faPenToSquare } from "@fortawesome/free-regular-svg-icons";
 import {
   faFacebookF,
   faInstagram,
@@ -40,14 +39,16 @@ import {
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
+// Custom theme context hook
 import { useTheme } from "../services/ThemeProvider";
 
+// Static data for featured projects
 const projects = [
   {
     title: "Forkify",
     images: [forkify1, forkify2, forkify3],
     description:
-      "Forkify is a dynamic recipe web app that allows users to search for recipes, view cooking instructions, and manage bookmarks. Built with JavaScript, it fetches real-time recipe data for an interactive experience.",
+      "Forkify is a dynamic recipe web app that allows users to search for recipes, view cooking instructions, and manage bookmarks...",
   },
   {
     title: "Living+",
@@ -62,26 +63,28 @@ const projects = [
       living7,
     ],
     description:
-      "Living+ is a full-stack web application designed to simplify the process of finding and managing shared accommodations for students. Inspired by platforms like PakWheels but tailored for housing, it connects property owners with student applicants through listings and a built-in real-time chat system. The platform ensures a user-friendly experience with secure authentication, dynamic filtering, and responsive design.",
+      "Living+ is a full-stack web application designed to simplify the process of finding and managing shared accommodations for students...",
   },
   {
     title: "Gym Management System",
     images: [gymImage, gymImage1],
-    description:
-      "A Java-based desktop app to manage gym operations. It tracks memberships, schedules, and payments, streamlining the user and staff experience.",
+    description: "A Java-based desktop app to manage gym operations...",
   },
 ];
 
+// Main Home component
 const Home = () => {
-  const { darkMode, toggleTheme } = useTheme();
-  const [selectedProject, setSelectedProject] = useState(null);
-  const [showModal, setShowModal] = useState(false);
+  const { darkMode, toggleTheme } = useTheme(); // Theme toggling hook
+  const [selectedProject, setSelectedProject] = useState(null); // State for modal project
+  const [showModal, setShowModal] = useState(false); // Modal visibility state
 
+  // Opens the modal with selected project
   const openModal = (project) => {
     setSelectedProject(project);
     setShowModal(true);
   };
 
+  // Closes the modal
   const closeModal = () => {
     setShowModal(false);
     setSelectedProject(null);
@@ -89,12 +92,14 @@ const Home = () => {
 
   return (
     <div className="home">
+      {/* Navigation bar */}
       <nav className="nav">
         <div className="nav-brand">
           <div className="nav-logo">A</div>
           <span>Abdullah</span>
         </div>
         <div className="nav-links">
+          {/* Navigation links */}
           <a href="#home">
             <FontAwesomeIcon icon={faHouse} />
             <span>Home</span>
@@ -115,6 +120,8 @@ const Home = () => {
             <FontAwesomeIcon icon={faEnvelope} />
             <span>Contact</span>
           </a>
+
+          {/* Theme toggle button */}
           <button onClick={toggleTheme} className="theme-toggle-btn">
             {darkMode ? (
               <>
@@ -129,6 +136,7 @@ const Home = () => {
         </div>
       </nav>
 
+      {/* Hero section */}
       <section className="hero" id="home">
         <div className="hero-container">
           <div className="hero-content">
@@ -137,16 +145,12 @@ const Home = () => {
               <br />
               Abdullah Shakir
             </h1>
-            <p>
-              I am a dedicated software engineer with expertise in Java, Python,
-              and C++, specializing in backend development and desktop
-              applications. I am currently based in Pakistan, with hands-on
-              experience from internships at Webwrite Inc. and Digital
-              Empowerment Pakistan.
-            </p>
+            <p>I am a dedicated software engineer...</p>
             <a href="#contact" className="btn-primary">
               Say Hello!
             </a>
+
+            {/* Experience stats */}
             <div className="stats">
               <div className="stat-card">
                 <h3>1 Y.</h3>
@@ -162,20 +166,21 @@ const Home = () => {
               </div>
             </div>
           </div>
+
+          {/* Hero profile image */}
           <div className="hero-image">
             <img src={profileImage} alt="Profile Image" />
           </div>
         </div>
       </section>
 
+      {/* About section */}
       <section className="about" id="about">
         <div className="card">
           <div className="profile-section">
-            <img
-              src={profileImage}
-              alt="Profile Image"
-              className="profile-image"
-            />
+            <img src={profileImage} alt="Profile" className="profile-image" />
+
+            {/* Social media icons */}
             <div className="social-icons">
               <a
                 href="https://www.facebook.com/abdullah.shakir.5836"
@@ -203,17 +208,11 @@ const Home = () => {
               </a>
             </div>
           </div>
+
+          {/* About text and buttons */}
           <div className="content-section">
             <h1>I am Professional User Experience Designer</h1>
-            <p>
-              I design and develop services for customers specializing creating
-              stylish, modern websites, web services and online stores. My
-              passion is to design digital user experiences.
-            </p>
-            <p>
-              I design and develop services for customers specializing creating
-              stylish, modern websites, web services.
-            </p>
+            <p>I design and develop services for customers...</p>
             <div className="buttons">
               <a href="#projects" className="button primary">
                 My Project
@@ -230,66 +229,50 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Work process section */}
       <section className="process" id="process">
         <div className="process-container">
           <h2 className="process-title">Work Process</h2>
           <div className="process-grid">
+            {/* Process steps */}
             <div className="process-card">
               <a className="social-icon purple">
                 <FontAwesomeIcon icon={faCalendar} />
               </a>
               <h3>1. Research</h3>
-              <p>
-                I gather in-depth insights into the project's goals, target
-                audience, and market trends. This involves analyzing
-                competitors, identifying user needs, and understanding industry
-                standards to lay a strong foundation for design and development.
-              </p>
+              <p>I gather in-depth insights...</p>
             </div>
             <div className="process-card">
               <a className="social-icon purple">
                 <FontAwesomeIcon icon={faChartLine} />
               </a>
               <h3>2. Analyze</h3>
-              <p>
-                I evaluate the research findings to identify key challenges,
-                user requirements, and system specifications. This helps in
-                defining clear objectives, setting priorities, and outlining the
-                project scope for effective problem-solving.
-              </p>
+              <p>I evaluate the research findings...</p>
             </div>
             <div className="process-card">
               <a className="social-icon purple">
                 <FontAwesomeIcon icon={faPenToSquare} />
               </a>
               <h3>3. Design</h3>
-              <p>
-                I create detailed wireframes, user interfaces, and system
-                architecture. This stage focuses on crafting user-friendly
-                layouts and developing technical blueprints to ensure the
-                solution is both functional and visually appealing.
-              </p>
+              <p>I create detailed wireframes...</p>
             </div>
             <div className="process-card">
               <a className="social-icon purple">
                 <FontAwesomeIcon icon={faLaptop} />
               </a>
               <h3>4. Launch</h3>
-              <p>
-                I deploy the final product after thorough testing to ensure
-                stability and performance. This step includes making the
-                solution available to users, monitoring for issues, and
-                gathering feedback for future improvements.
-              </p>
+              <p>I deploy the final product...</p>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Projects / Portfolio section */}
       <section className="portfolio" id="projects">
         <div className="portfolio-container">
           <h2 className="portfolio-title">Featured Projects</h2>
           <div className="portfolio-grid">
+            {/* Map each project to a ProjectCard */}
             {projects.map((project, index) => (
               <ProjectCard
                 key={index}
@@ -301,12 +284,15 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Conditional rendering of project modal */}
       {showModal && (
         <ProjectModal project={selectedProject} onClose={closeModal} />
       )}
 
+      {/* Contact section */}
       <section className="contact" id="contact">
         <div className="contact-container">
+          {/* Contact information */}
           <div className="contact-info">
             <div className="contact-card">
               <h4>Address</h4>
@@ -321,6 +307,8 @@ const Home = () => {
               <p>+923128003333</p>
             </div>
           </div>
+
+          {/* Contact form */}
           <form className="contact-form">
             <div className="form-group">
               <label htmlFor="name">Name</label>
