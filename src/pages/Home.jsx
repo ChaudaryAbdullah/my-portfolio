@@ -145,7 +145,14 @@ const Home = () => {
               <br />
               Abdullah Shakir
             </h1>
-            <p>I am a dedicated software engineer...</p>
+            <p>
+              {" "}
+              I am a dedicated software engineer with expertise in Java, Python,
+              and C++, specializing in backend development and desktop
+              applications. I am currently based in Pakistan, with hands-on
+              experience from internships at Webwrite Inc. and Digital
+              Empowerment Pakistan.
+            </p>
             <a href="#contact" className="btn-primary">
               Say Hello!
             </a>
@@ -212,7 +219,15 @@ const Home = () => {
           {/* About text and buttons */}
           <div className="content-section">
             <h1>I am Professional User Experience Designer</h1>
-            <p>I design and develop services for customers...</p>
+            <p>
+              I design and develop services for customers specializing creating
+              stylish, modern websites, web services and online stores. My
+              passion is to design digital user experiences.
+            </p>
+            <p>
+              I design and develop services for customers specializing creating
+              stylish, modern websites, web services.
+            </p>
             <div className="buttons">
               <a href="#projects" className="button primary">
                 My Project
@@ -240,28 +255,51 @@ const Home = () => {
                 <FontAwesomeIcon icon={faCalendar} />
               </a>
               <h3>1. Research</h3>
-              <p>I gather in-depth insights...</p>
+              <p>
+                {" "}
+                I gather in-depth insights into the project's goals, target
+                audience, and market trends. This involves analyzing
+                competitors, identifying user needs, and understanding industry
+                standards to lay a strong foundation for design and development.
+              </p>
             </div>
             <div className="process-card">
               <a className="social-icon purple">
                 <FontAwesomeIcon icon={faChartLine} />
               </a>
               <h3>2. Analyze</h3>
-              <p>I evaluate the research findings...</p>
+              <p>
+                I evaluate the research findings to identify key challenges,
+                user requirements, and system specifications. This helps in
+                defining clear objectives, setting priorities, and outlining the
+                project scope for effective problem-solving.
+              </p>
             </div>
             <div className="process-card">
               <a className="social-icon purple">
                 <FontAwesomeIcon icon={faPenToSquare} />
               </a>
               <h3>3. Design</h3>
-              <p>I create detailed wireframes...</p>
+              <p>
+                {" "}
+                I create detailed wireframes, user interfaces, and system
+                architecture. This stage focuses on crafting user-friendly
+                layouts and developing technical blueprints to ensure the
+                solution is both functional and visually appealing.
+              </p>
             </div>
             <div className="process-card">
               <a className="social-icon purple">
                 <FontAwesomeIcon icon={faLaptop} />
               </a>
               <h3>4. Launch</h3>
-              <p>I deploy the final product...</p>
+              <p>
+                {" "}
+                I deploy the final product after thorough testing to ensure
+                stability and performance. This step includes making the
+                solution available to users, monitoring for issues, and
+                gathering feedback for future improvements.
+              </p>
             </div>
           </div>
         </div>

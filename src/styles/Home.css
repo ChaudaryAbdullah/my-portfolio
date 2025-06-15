@@ -24,49 +24,34 @@ body.light {
 }
 
 body.dark {
-  
-  --bg: #0c121f; 
+  --bg: #0c121f;
   --text: #f2f7ff;
-  --text-secondary: #c8d4e5; 
-  --text-muted: #9baec9; 
+  --text-secondary: #c8d4e5;
+  --text-muted: #9baec9;
 
-
-  --primary: #a765f9
-  --primary-hover: #bb80ff;
+  --primary: #7c3aed;
+  --primary-hover: #6d28d9;
   --primary-active: #8e4edd;
-  --accent: #65f9dd; 
+  --accent: #65f9dd;
 
-  
-  --card: #151f33; 
-  --nav-bg: #151f33; 
-  --stat-bg: #151f33; 
-  --input-bg: #1f2c45; 
+  --card: #151f33;
+  --nav-bg: #151f33;
+  --stat-bg: #151f33;
+  --input-bg: #1f2c45;
   --input-border: #3a4e70;
 
-  
-  --hero-bg: linear-gradient(
-    135deg,
-    #151f33 0%,
-    #202d42 100%
-  );
+  --hero-bg: linear-gradient(135deg, #151f33 0%, #202d42 100%);
   --about-bg: linear-gradient(135deg, #151f33 -50%, #202d42 100%) 0% 0% / 100%
       72% no-repeat,
-    linear-gradient(to bottom, #0c121f, #0c121f) 0% 100% / 100% 28% no-repeat; 
-  --process-bg: #0c121f; 
+    linear-gradient(to bottom, #0c121f, #0c121f) 0% 100% / 100% 28% no-repeat;
+  --process-bg: #0c121f;
   --portfolio-bg: #151f33;
-  --contact-bg: #0c121f; 
+  --contact-bg: #0c121f;
   --contact-card: #151f33;
 
-  
-  --shadow: rgba(
-    0,
-    0,
-    0,
-    0.45
-  ); 
+  --shadow: rgba(0, 0, 0, 0.45);
   --border-color: #2a3c59;
 
-  
   --social-icon-hover: #202d42;
   --link-hover: var(--primary-hover);
 }
