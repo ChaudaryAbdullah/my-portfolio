@@ -1,8 +1,18 @@
 import React, { useState } from "react";
 import profileImage from "../assets/images/2023_04_19_17_15_IMG_1912.JPG";
-import logoImage from "../assets/images/logo.png";
+import forkify1 from "../assets/images/forkify1.png";
+import forkify2 from "../assets/images/forkify2.png";
+import forkify3 from "../assets/images/forkify3.png";
+import living1 from "../assets/images/living+1.png";
+import living2 from "../assets/images/living+2.png";
+import living3 from "../assets/images/living+3.png";
+import living4 from "../assets/images/living+4.png";
+import living5 from "../assets/images/living+5.png";
+import living6 from "../assets/images/living+6.png";
+import living7 from "../assets/images/living+7.png";
 import backgroundImage from "../assets/images/background.jpg";
 import gymImage from "../assets/images/gym_1542212911.jpg";
+import gymImage1 from "../assets/images/gym.jpg";
 import Abdullah_Resume from "../assets/files/Abdullah_Resume.pdf";
 import "../styles/Home.css";
 import ProjectModal from "./ProjectModel";
@@ -35,19 +45,28 @@ import { useTheme } from "../services/ThemeProvider";
 const projects = [
   {
     title: "Forkify",
-    images: [logoImage, gymImage],
+    images: [forkify1, forkify2, forkify3],
     description:
       "Forkify is a dynamic recipe web app that allows users to search for recipes, view cooking instructions, and manage bookmarks. Built with JavaScript, it fetches real-time recipe data for an interactive experience.",
   },
   {
     title: "Living+",
-    images: [backgroundImage],
+    images: [
+      backgroundImage,
+      living1,
+      living2,
+      living3,
+      living4,
+      living5,
+      living6,
+      living7,
+    ],
     description:
-      "Living+ is a desktop rental management system for students to find housing like hostels and apartments. Built in Java, it supports property listings and tenant management.",
+      "Living+ is a full-stack web application designed to simplify the process of finding and managing shared accommodations for students. Inspired by platforms like PakWheels but tailored for housing, it connects property owners with student applicants through listings and a built-in real-time chat system. The platform ensures a user-friendly experience with secure authentication, dynamic filtering, and responsive design.",
   },
   {
     title: "Gym Management System",
-    images: [gymImage],
+    images: [gymImage, gymImage1],
     description:
       "A Java-based desktop app to manage gym operations. It tracks memberships, schedules, and payments, streamlining the user and staff experience.",
   },
