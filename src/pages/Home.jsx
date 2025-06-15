@@ -1,5 +1,6 @@
 // Importing necessary dependencies and assets
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 import profileImage from "../assets/images/2023_04_19_17_15_IMG_1912.JPG";
 import forkify1 from "../assets/images/forkify1.png";
 import forkify2 from "../assets/images/forkify2.png";
@@ -77,6 +78,55 @@ const Home = () => {
   const { darkMode, toggleTheme } = useTheme(); // Theme toggling hook
   const [selectedProject, setSelectedProject] = useState(null); // State for modal project
   const [showModal, setShowModal] = useState(false); // Modal visibility state
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); // prevent page reload
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+    if (!name || !email || !message) {
+      toast.error("Please fill in all required fields.", {
+        // variants: success | info | warning | error | default
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        draggable: true,
+        theme: "colored",
+      });
+    } else if (!isEmailValid) {
+      toast.error("Please enter a valid email address.", {
+        // variants: success | info | warning | error | default
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        draggable: true,
+        theme: "colored",
+      });
+      toast.error("Something went wrong. Please try again!", {
+        // variants: success | info | warning | error | default
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        draggable: true,
+        theme: "colored",
+      });
+    } else {
+      toast.success("Thank You!", {
+        // variants: success | info | warning | error | default
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        draggable: true,
+        theme: "colored",
+      });
+      // Optionally reset the form:
+      e.target.reset();
+    }
+  };
 
   // Opens the modal with selected project
   const openModal = (project) => {
@@ -347,7 +397,7 @@ const Home = () => {
           </div>
 
           {/* Contact form */}
-          <form className="contact-form">
+          <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="name">Name</label>
               <input type="text" id="name" required />
@@ -366,6 +416,7 @@ const Home = () => {
           </form>
         </div>
       </section>
+      <ToastContainer />
     </div>
   );
 };
