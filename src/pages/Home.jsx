@@ -49,7 +49,7 @@ const projects = [
     title: "Forkify",
     images: [forkify1, forkify2, forkify3],
     description:
-      "Forkify is a dynamic recipe web app that allows users to search for recipes, view cooking instructions, and manage bookmarks...",
+      "Forkify is a dynamic recipe web application that allows users to search for recipes, view detailed cooking instructions, and manage bookmarks for their favorite dishes. Built with JavaScript, it seamlessly integrates APIs to fetch real-time recipe data, offering a user-friendly and interactive cooking experience.",
   },
   {
     title: "Living+",
@@ -64,12 +64,16 @@ const projects = [
       living7,
     ],
     description:
-      "Living+ is a full-stack web application designed to simplify the process of finding and managing shared accommodations for students...",
+      "Living+ is a full-stack web application designed to simplify the process of finding and managing shared accommodations for students. Inspired by platforms like PakWheels but tailored for housing, it connects property owners with student applicants through listings and a built-in real-time chat system. The platform ensures a user-friendly experience with secure authentication, dynamic filtering, and responsive design.",
   },
   {
     title: "Gym Management System",
     images: [gymImage, gymImage1],
-    description: "A Java-based desktop app to manage gym operations...",
+    description: `The Gym Management System is a comprehensive desktop application
+              designed to streamline the management of gym operations. Developed
+              using Java, it allows gym owners to track memberships, manage
+              schedules, and handle payments, ensuring a smooth experience for
+              both clients and staff.`,
   },
 ];
 
